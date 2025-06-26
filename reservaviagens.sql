@@ -65,7 +65,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'guilherme oliveira ribeiro soares','guilherme.oriso@gmail.com','guigui06','(61) 99198-6716');
+INSERT INTO `usuario` VALUES (1,'guilherme soares','guilherme.oriso@gmail.com','0000000','(61) 99198-6716');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
