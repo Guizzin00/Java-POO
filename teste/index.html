@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservas de Viagem</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>🌍 Sistema de Reservas de Viagem</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Cadastro de Passageiro</h2>
+            <form id="formPassageiro">
+                <input type="text" class="nome" placeholder="Nome completo" required />
+                <input type="email" class="email" placeholder="Email" required />
+                <input type="password" class="senha" placeholder="Senha" required />
+                <input type="text" class="telefone" placeholder="Telefone" required />
+                <button type="submit">Cadastrar Passageiro</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Cadastro de Destino</h2>
+            <form id="formDestino">
+                <select class="pais" required>
+                    <option value="">Selecione um país</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Japão">Japão</option>
+                    <option value="França">França</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Itália">Itália</option>
+                </select>
+
+                <select class="cidade" required>
+                    <option value="">Selecione a cidade/estado</option>
+                </select>
+
+                <button type="submit">Cadastrar Destino</button>
+            </form>
+        </section>
+
+        <a href="reserva.html" class="card" style="text-align:center;">
+            <strong>➡ Ir para Reserva de Viagem</strong>
+        </a>
+    </main>
+    <footer style="
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #111;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 40px;
+  ">
+        Dev by Guizzin00
+    </footer>
+</body>
+<script>
+    const telefoneInput = document.querySelector(".telefone");
+
+    telefoneInput.addEventListener("input", function (e) {
+        let input = e.target.value.replace(/\D/g, ""); // Remove tudo que não é dígito
+
+        // Limita a quantidade de dígitos
+        if (input.length > 11) {
+            input = input.slice(0, 11);
+        }
+
+        // Aplica a máscara
+        if (input.length > 6) {
+            input = `(${input.slice(0, 2)}) ${input.slice(2, 7)}-${input.slice(7)}`;
+        } else if (input.length > 2) {
+            input = `(${input.slice(0, 2)}) ${input.slice(2)}`;
+        } else if (input.length > 0) {
+            input = `(${input}`;
+        }
+
+        e.target.value = input;
+    });
+</script>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar Viagem</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>📅 Reserva de Viagem</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Passageiros Cadastrados</h2>
+            <table id="tabelaPassageiros">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Destinos Cadastrados</h2>
+            <table id="tabelaDestinos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>País</th>
+                        <th>Cidade</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Reservas Realizadas</h2>
+            <table id="tabelaReservas">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Passageiro</th>
+                        <th>Destino</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+
+        <section class="card" id="editarReservaSection" style="display:none;">
+            <h2>Editar Reserva</h2>
+            <form id="formEditarReserva">
+                <input type="hidden" class="editId" />
+                <label>Passageiro:</label>
+                <select class="editPassageiro" required></select>
+                <label>Destino:</label>
+                <select class="editDestino" required></select>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </section>
+
+
+
+        <section class="card">
+            <h2>Reservar Viagem</h2>
+            <form id="formViagem">
+                <select class="idPassageiro" required>
+                    <option value="">Selecione um Passageiro</option>
+                </select>
+                <select class="idDestino" required>
+                    <option value="">Selecione um Destino</option>
+                </select>
+                <button type="submit">Reservar Viagem</button>
+            </form>
+        </section>
+
+        <a href="index.html" class="card" style="text-align:center;">
+            <strong>⬅ Voltar para Cadastro</strong>
+        </a>
+    </main>
+    <footer style="
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #111;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 40px;
+  ">
+        Dev by Guizzin00
+    </footer>
+</body>
+
+</html>
